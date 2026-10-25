@@ -58,6 +58,9 @@ app.use("/chatmessage", chatMessageRoute);
 const callRoute = require("./routes/call");
 app.use("/call", callRoute);
 
+const uploads3Route = require("./routes/uploads3");
+app.use("/uploads3", uploads3Route);
+
 io.on("connection", (socket) => {
   socket.on("signin", (id) => {
     console.log(id, "signin");
